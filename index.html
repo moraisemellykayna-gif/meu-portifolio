@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha jornada: quem sou, meus sonhos e minha evolução</title>
+<meta name="description" content="Minha história, meus valores e os sonhos que estou construindo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <a class="marca" href="#inicio">Minha jornada</a>
+  <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav id="menu" class="menu">
+    <a href="#sobre">Sobre mim</a>
+    <a href="#objetivos">Meus objetivos</a>
+    <a href="#valores">Meus valores</a>
+    <a href="#sonhos">Meus sonhos</a>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio" class="hero">
+    <div class="hero-texto">
+      <h1>Em constante evolução: essa sou eu.</h1>
+      <p>Minha história, meus sonhos e o caminho que estou construindo, no meu tempo.</p>
+      <a class="botao" href="#sobre">Conhecer minha história</a>
+    </div>
+    <svg class="caminho" viewBox="0 0 300 520" aria-hidden="true">
+      <path id="trilha" d="M40 10 C 260 60, 20 150, 200 220 S 40 360, 230 420 S 150 490, 150 505" />
+      <circle id="ponto" cx="150" cy="505" r="7" />
+    </svg>
+  </section>
+
+  <section id="sobre" class="secao">
+    <h2>Quem sou eu?</h2>
+    <div class="texto-longo">
+      <p>Sou uma jovem em constante aprendizado, descobrindo quem sou e construindo o meu próprio caminho. Tenho sonhos, objetivos e muitos planos para o futuro.</p>
+      <p>Acredito que a vida é feita de fases, mudanças e oportunidades de recomeçar. Cada experiência traz um aprendizado, e não precisamos ter todas as respostas agora.</p>
+      <p>O importante é continuar caminhando, respeitando o nosso tempo e nunca deixar de acreditar nos nossos sonhos.</p>
+    </div>
+  </section>
+
+  <section id="objetivos" class="secao fundo">
+    <h2>Meus objetivos</h2>
+    <ul class="lista-linhas">
+      <li>
+        <h3>Carreira</h3>
+        <p>Crescer profissionalmente e adquirir novos conhecimentos.</p>
+      </li>
+      <li>
+        <h3>Estudos</h3>
+        <p>Continuar me desenvolvendo, aprendendo e superando desafios.</p>
+      </li>
+      <li>
+        <h3>Independência</h3>
+        <p>Conquistar minha liberdade e construir meu futuro com minhas próprias escolhas.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="valores" class="secao">
+    <h2>Meus valores</h2>
+    <div class="valores">
+      <article><h3>Fé</h3><p>Ela me dá direção e força para seguir em frente.</p></article>
+      <article><h3>Família</h3><p>É a base de tudo o que sou e do que construo.</p></article>
+      <article><h3>Respeito</h3><p>Por mim, pelas pessoas e pelo tempo de cada fase.</p></article>
+      <article><h3>Amor</h3><p>É o que dá sentido às minhas escolhas.</p></article>
+    </div>
+  </section>
+
+  <section id="sonhos" class="secao fundo">
+    <h2>Meus sonhos</h2>
+    <p class="apoio">Toque em um sonho para marcar como conquistado.</p>
+    <ul id="lista-sonhos" class="sonhos"></ul>
+    <p id="progresso" class="progresso" aria-live="polite"></p>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p>Meu maior objetivo é me tornar a mulher que desejo ser.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+:root{
+  --linho:#FAF6F0; --areia:#EFE6DA; --branco:#FFFFFF;
+  --cafe:#4A3326; --mocha:#7A5B45; --cappuccino:#C9AE94;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--linho);color:var(--cafe);font-family:var(--sans);font-size:1.0625rem;line-height:1.7}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mocha);outline-offset:3px;border-radius:4px}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;
+  padding:.9rem clamp(1.25rem,5vw,4rem);background:rgba(250,246,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--areia)}
+.marca{font-family:var(--serif);font-size:1.5rem;font-weight:600;text-decoration:none}
+.menu{display:flex;gap:1.75rem}
+.menu a{text-decoration:none;color:var(--mocha);padding:.25rem 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s}
+.menu a:hover,.menu a.ativo{color:var(--cafe);border-color:var(--cappuccino)}
+.menu-btn{display:none;background:none;border:1px solid var(--cappuccino);color:var(--cafe);font:inherit;padding:.3rem .9rem;border-radius:99px;cursor:pointer}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:2rem;
+  min-height:calc(100vh - 60px);padding:3rem clamp(1.25rem,5vw,4rem);max-width:1200px;margin:0 auto}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.8rem,7.5vw,6rem);line-height:1.02;letter-spacing:-.01em;max-width:11ch}
+.hero p{margin:1.5rem 0 2rem;max-width:34ch;color:var(--mocha);font-size:1.15rem}
+.botao{display:inline-block;background:var(--cafe);color:var(--linho);padding:.85rem 1.8rem;border-radius:99px;text-decoration:none;font-weight:500;transition:background .2s,transform .2s}
+.botao:hover{background:var(--mocha);transform:translateY(-2px)}
+.caminho{width:100%;max-height:78vh}
+#trilha{fill:none;stroke:var(--cappuccino);stroke-width:3;stroke-linecap:round}
+#ponto{fill:var(--cafe);opacity:0;transition:opacity .4s 2.2s}
+.pronto #ponto{opacity:1}
+
+/* seções */
+.secao{padding:clamp(4rem,9vw,7rem) clamp(1.25rem,5vw,4rem)}
+.secao>*{max-width:1000px;margin-left:auto;margin-right:auto}
+.fundo{background:var(--areia)}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.1;margin-bottom:2rem}
+h3{font-family:var(--serif);font-weight:600;font-size:1.7rem;line-height:1.2}
+.texto-longo{max-width:62ch;margin-left:max(0px,calc((100% - 1000px)/2))}
+.texto-longo p+p{margin-top:1.2rem}
+.apoio{color:var(--mocha);margin:-1rem auto 1.5rem}
+
+.lista-linhas{list-style:none}
+.lista-linhas li{display:grid;grid-template-columns:240px 1fr;gap:1rem 2rem;padding:1.6rem 0;border-top:1px solid var(--cappuccino)}
+.lista-linhas li:last-child{border-bottom:1px solid var(--cappuccino)}
+
+.valores{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2.5rem 2rem}
+.valores article{border-left:3px solid var(--cappuccino);padding-left:1.2rem}
+.valores p{margin-top:.5rem;color:var(--mocha)}
+
+/* sonhos */
+.sonhos{list-style:none;display:grid;gap:.8rem}
+.sonho{width:100%;display:flex;align-items:center;gap:1rem;text-align:left;font:inherit;color:inherit;
+  background:var(--branco);border:1px solid var(--cappuccino);border-radius:14px;padding:1.1rem 1.3rem;cursor:pointer;transition:background .25s,border-color .25s}
+.sonho:hover{border-color:var(--mocha)}
+.marca-sonho{flex:none;width:28px;height:28px;border:2px solid var(--cappuccino);border-radius:50%;display:grid;place-items:center;color:transparent;transition:all .25s}
+.sonho[aria-pressed="true"]{background:var(--cafe);color:var(--linho);border-color:var(--cafe)}
+.sonho[aria-pressed="true"] .marca-sonho{background:var(--linho);border-color:var(--linho);color:var(--cafe)}
+.progresso{margin-top:1.5rem;color:var(--mocha)}
+
+.rodape{background:var(--cafe);color:var(--areia);text-align:center;padding:3rem 1.25rem;font-family:var(--serif);font-size:1.5rem}
+
+/* celular */
+@media (max-width:760px){
+  .menu-btn{display:block}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--linho);border-bottom:1px solid var(--areia)}
+  .menu.aberto{display:flex}
+  .menu a{padding:.9rem 1.25rem;border:0}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .caminho{max-height:260px;order:-1}
+  .lista-linhas li{grid-template-columns:1fr;gap:.3rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
